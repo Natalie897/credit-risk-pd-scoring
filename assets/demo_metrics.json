@@ -1,0 +1,57 @@
+{
+  "dataset": "synthetic_educational_only",
+  "splits": {
+    "train": 2020,
+    "validation": 1996,
+    "test": 1984
+  },
+  "validation_models": {
+    "logistic_regression": {
+      "roc_auc": 0.794597508868107,
+      "gini": 0.589195017736214,
+      "pr_auc": 0.41862775022813536,
+      "brier": 0.08182891596960577,
+      "log_loss": 0.28452554392140944,
+      "precision_at_0_5": 0.6376811594202898,
+      "recall_at_0_5": 0.19642857142857142,
+      "observed_default_rate": 0.11222444889779559,
+      "mean_predicted_pd": 0.1151274484168814
+    },
+    "xgboost": {
+      "roc_auc": 0.7692881328603677,
+      "gini": 0.5385762657207354,
+      "pr_auc": 0.3499724628782087,
+      "brier": 0.08561999896874309,
+      "log_loss": 0.2973877699397076,
+      "precision_at_0_5": 0.5333333333333333,
+      "recall_at_0_5": 0.17857142857142858,
+      "observed_default_rate": 0.11222444889779559,
+      "mean_predicted_pd": 0.11375877279918901
+    }
+  },
+  "selected_by": "validation roc_auc",
+  "selected_model": "logistic_regression",
+  "test_raw": {
+    "roc_auc": 0.7440112042040553,
+    "gini": 0.4880224084081106,
+    "pr_auc": 0.36885157617281084,
+    "brier": 0.08920482474460706,
+    "log_loss": 0.3118587003177365,
+    "precision_at_0_5": 0.6206896551724138,
+    "recall_at_0_5": 0.1565217391304348,
+    "observed_default_rate": 0.1159274193548387,
+    "mean_predicted_pd": 0.10870891369476494
+  },
+  "test_isotonic_calibrated": {
+    "roc_auc": 0.7440583015219869,
+    "gini": 0.48811660304397386,
+    "pr_auc": 0.34394508798495543,
+    "brier": 0.08960083686257661,
+    "log_loss": 0.33524888437833844,
+    "precision_at_0_5": 0.6349206349206349,
+    "recall_at_0_5": 0.17391304347826086,
+    "observed_default_rate": 0.1159274193548387,
+    "mean_predicted_pd": 0.10640123571104457
+  },
+  "notes": "Model selection and calibration use 2024 validation; 2025 holdout is evaluated once. No customer decisions."
+}
